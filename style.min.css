@@ -45,24 +45,6 @@ a {
   color: #000000;
 }
 
-#viewport {
-  overflow: hidden;
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-
-#scroll-container {
-  overflow: visible;
-  width: 100%;
-  /* set a height because the contents are position: absolute, thus natively there's no height */
-  height: 100%;
-}
-
 .color-change {
   color: black;
 }
@@ -224,6 +206,7 @@ footer a {
     line-height: 17px;
   }
   header .header-flex-container {
+    top: 20px;
     left: 0px;
     padding: 0 20px;
     display: -webkit-box;
@@ -251,9 +234,12 @@ footer a {
     display: block;
   }
   header .title-container {
-    margin-top: none;
-    margin-left: none;
-    margin: 180px auto 0 auto;
+    position: fixed;
+    top: 45vh;
+    left: 0;
+    width: 100%;
+    margin-top: 0;
+    margin-left: 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -261,12 +247,20 @@ footer a {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  header .title-container .title-line2,
-  header .title-container .title-line3 {
+  header .title-container .title-animation-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  header .title-container .title-animation-container .title-line2,
+  header .title-container .title-animation-container .title-line3 {
     display: block;
   }
-  header .title-container .title-line2 {
-    margin: 0 60px;
+  header .title-container .title-animation-container .title-line2 {
+    padding: 0 60px;
   }
 }
 
